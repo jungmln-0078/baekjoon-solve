@@ -1,9 +1,9 @@
 fun main() {
-    val N = readln().toInt()
-    val gimal = readln().split(" ").map { it.toInt() }
-    for (i: Int in gimal.indices) {
-        val B = gimal.filterIndexed{ index, rank -> rank < gimal[i] && index > i}.size
-        val C = gimal.filterIndexed{ index, rank -> rank > gimal[i] && index < i}.size
-        println(B - C)
+    readln()
+    val score = readln().split(" ").map { it.toInt() }
+    val answer = MutableList(score.size) {0}
+    for (i: Int in score.indices) {
+        answer[score[i] - 1] = score[i] - (i + 1)
     }
+    println(answer.joinToString("\n"))
 }
