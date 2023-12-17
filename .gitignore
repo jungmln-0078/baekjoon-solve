@@ -1,2 +1,4 @@
 .idea/
 out/
+/src/main/kotlin/kotlin.iml
+/src/main/main.iml
